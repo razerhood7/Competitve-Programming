@@ -1,0 +1,22 @@
+class Solution {
+private:
+    int solve(int n,vector<int>& dp)
+    {
+        if(dp[n]!=-1)
+            return dp[n];
+        
+        if(n<=1)
+            return n;
+        
+        return dp[n]=solve(n-1,dp)+solve(n-2,dp);
+    }
+    
+public:
+    int fib(int n) {
+        vector<int> dp(n+1,-1);
+        if(n<=1)
+            return n;
+        solve(n,dp);
+        return dp[n];
+    }
+};
