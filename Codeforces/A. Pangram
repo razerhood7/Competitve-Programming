@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+#include <stdio.h>
+using namespace std;
+
+int main()
+{
+    int i,n,flag=0,count=0,sum=26;
+    set<char>s;
+    cin>>n;
+    string a;
+    cin>>a;
+    for(i=0;i<n;i++)
+    {
+        if(a[i]>='A'&&a[i]<='Z')
+        {
+            a[i]=a[i]+32;
+        }
+        //cout<<a[i];
+        s.insert(a[i]);
+    }
+    if(s.size()==26)
+    {
+        cout<<"yes";
+    }
+    else
+    {
+        cout<<"no";
+    }
+    return 0;
+}
