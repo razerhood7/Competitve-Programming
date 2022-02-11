@@ -13,7 +13,13 @@ string rtrim(const string &);
  */
 
 int theLoveLetterMystery(string s) {
-
+    int i;
+        int rs = 0;
+        for(i=0 ; i< s.length()/2 ; i++)
+        {
+              rs += abs(s[i] - s[s.length()-i-1]);
+        }
+        return rs;
 }
 
 int main()
